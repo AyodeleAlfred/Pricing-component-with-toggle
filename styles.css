@@ -1,0 +1,210 @@
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(246, 246, 254);
+    background-image: url('./images/bg-top.svg');
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.heading {
+    margin: 4em auto 3em auto;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    color: hsl(234, 14%, 74%);
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    margin: 0 1.5em;
+    width: 55px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.switch input {
+    display: none;
+}
+
+/* designing the slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgb(144, 196, 245), hsl(237, 63%, 64%));
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    top: 2.5px;
+    left: 2.5px;
+    color: white;
+    background: white;
+    /* -webkit-transition: .4s; */
+    transition: .4s;
+}
+
+input:checked+.slider:before {
+    /* -webkit-transform: translateX(22px); */
+    /* -ms-transform: translateX(22px); */
+    transform: translateX(25px);
+}
+
+.packages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.package {
+    min-width: 400px;
+    height: auto;
+    padding: 2em;
+    background: white;
+    margin: 2.5em;
+    border-radius: 1em;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.blue {
+    background: linear-gradient(90deg, rgb(144, 196, 245), hsl(237, 63%, 64%));
+    color: white;
+    height: auto;
+}
+
+
+/* TYPOGRAPHY */
+.heading h1 {
+    color: rgb(109, 112, 141);
+    margin: 1em;
+}
+
+.package-title {
+    font-size: 1.5rem;
+    color: rgb(48, 44, 44);
+    padding: 2em;
+}
+
+.package-price {
+    font-size: 1.5rem;
+    color: rgb(48, 44, 44);
+    font-weight: bolder;
+    border-bottom: 2px solid grey;
+    padding-bottom: .5em;
+}
+
+span {
+    font-size: 3rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    padding: 1em;
+    border-bottom: 2px solid grey;
+}
+
+#basic-year,
+#pro-year,
+#master-year {
+    display: none;
+}
+
+.packages:last-child {
+    border-bottom: none;
+}
+
+.white-btn {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    background: linear-gradient(9deg, rgb(144, 196, 245), hsl(237, 63%, 64%));
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 2em auto 1em auto;
+}
+
+.white-btn:hover {
+    color: rgb(144, 196, 245);
+    background: white;
+    border: 2px solid rgb(144, 196, 245);
+}
+
+.blue-btn {
+    /* width: 100%; */
+    padding: 1em;
+    text-align: center;
+    background: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgb(144, 196, 245);
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 2em auto 1em auto;
+    cursor: pointer;
+}
+
+.blue-btn:hover {
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:1300px) {
+    .packages {
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .package {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .blue {
+        height: 720px;
+    }
+
+    .left {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .right {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}

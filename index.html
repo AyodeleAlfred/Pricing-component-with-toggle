@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Frontend Mentor | Pricing component with toggle</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Our Pricing</h1>
+            <div class="pricing">
+                <p>Annually</p>
+                <!-- button -->
+                <label class="switch">
+                  <input class="check-btn" type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+                <!-- end of button -->
+                <p>Monthly</p>
+              </div>
+        </div>
+
+        <div class="packages">
+            <div class="package left">
+                <p class="package-title">Basic</p>
+                <p class="package-price" id="basic-month">
+                    &dollar;<span>19.99</span>
+                </p>
+                <p class="package-price" id="basic-year">
+                    &dollar;<span>199.99</span>
+                </p>
+                <p class="text">500 GB Storage</p>
+                <p class="text">2 Users Allowed</p>
+                <p class="text">Send up to 3 GB</p>
+                <p class="white-btn">Learn More</p>
+            </div>
+
+            <div class="package blue">
+                <p class="package-title">Professional</p>
+                <p class="package-price" id="pro-month">
+                    &dollar;<span>24.99</span>
+                </p>
+                <p class="package-price" id="pro-year">
+                    &dollar;<span>249.99</span>
+                </p>
+                <p class="text">1TB GB Storage</p>
+                <p class="text">5 Users Allowed</p>
+                <p class="text">Send up to 10 GB</p>
+                <p class="blue-btn">Learn More</p>
+            </div>
+
+            <div class="package right">
+                <p class="package-title">Master</p>
+                <p class="package-price" id="master-month">
+                    &dollar;<span>39.99</span>
+                </p>
+                <p class="package-price" id="master-year">
+                    &dollar;<span>399.99</span>
+                </p>
+                <p class="text">2 TB Storage</p>
+                <p class="text">10 Users Allowed</p>
+                <p class="text">Send up to 30 GB</p>
+                <p class="white-btn">Learn More</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
